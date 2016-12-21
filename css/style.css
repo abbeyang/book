@@ -1,0 +1,35 @@
+#slide{text-align: center;}
+#slide .slider-slide{background-color:#617d68 }
+#haha{background-color:#617d68;color:#fff;}
+#slide img{width:420px;}
+.tabName{color:#8ba892;}
+#bars .bar-header{background-color:#8ba892;color:#fff;}
+#tabs .tabs{background-color:#617d68;color:#fff;}
+#bookIcon img{width:90px;border-radius:8px;}
+
+.ion-ios-arrow-back:before{ color:#fff;}
+
+#bars .ion-navicon{color:#fff}
+#bars .ion-home{color:#fff}
+.haha{background-color: #fff}
+
+#bookIconCard img{width:60px;border-radius:8px;}
+#bookIconCard1 img{width:60px;border-radius:0px;}
+#bookIconCard p{word-break:break-all;}
+#bookIcon h3{width:100px;border-radius:8px; text-align:left;padding-left:10px;}
+#bookIcon span{vertical-align:top;font-weight:bolder;color:#8ba892;font-family:Calibri}
+#bookIcon .book{float:left;margin-left:10px;}
+#cateButton{margin-bottom:5px;}
+#cateButton .col-50{background-color: #617d68;text-align: center;border-radius: 5px;}
+#cateButton .right{border-left:3px solid #eee;}
+#cateButton .left{border-right:3px solid #eee;}
+#cateButton span{line-height:80px;color:#fff;font-size: large}
+#bg{background-color:#eee;}
+
+#detailBottom{ position:absolute;width:100%;height:50px;background-color: #4cd964;}
+.bar-footer{background-color: #617d68}
+
+.bgColor{ background-color: #8ba892;  }
+.bgColor input{margin:0 auto;background-color: rgba(255,255,255,.3);border:1px solid #fff;width:90%;}
+
+

@@ -1,0 +1,30 @@
+<ion-view title="专栏">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back"
+                ng-click="goBack()"
+        ></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-home " ui-sref="home"
+        ></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div style="width:100vm;height:100vh;position:relative;">
+            <div style="position:absolute;left:0;top:0;width:100%;height:30%;">
+                <img class="item-image" src="images/writer_01_bg.png" style="height:250px;">
+                <p style="padding:20px;height:200px;overflow: auto;">
+                    <strong>阿尔贝·加缪</strong>（Albert Camus，1913—1960年），法国作家、哲学家，存在主义文学、“荒诞哲学”的代表人物。主要作品有《局外人》、《鼠疫》等。
+                    加缪于1957年获得诺贝尔文学奖，他在20世纪50年代以前，一直被看作是存在主义者，尽管他自己多次否认。1951年加缪发表了哲学论文《反抗者》之后，引起一场与萨特等人长达一年之久的论战，最后与萨特决裂。[1]
+                    加缪在他的小说、戏剧、随笔和论著中，深刻地揭示出人在异己的世界中的孤独、个人与自身的日益异化，以及罪恶和死亡的不可避免。但他在揭示出世界的荒诞的同时却并不绝望和颓丧，他主张要在荒诞中奋起反抗，在绝望中坚持真理和正义，他为世人指出了一条基督教和马克思主义以外的自由人道主义道路。他直面惨淡人生的勇气，他“知其不可而为之”的大无畏精神，使他在第二次世界大战之后不仅在法国，而且在欧洲并最终在全世界，成为他那一代人的代言人和下一代人的精神导师。
+                </p>
+                <div class="row">
+                    <div class="col-33 item-image" ng-repeat="book in books | filter:{writer:'加缪'}">
+                        <img ng-src={{book.imgsrc}} style="width:60px;border-radius:5px;">
+                        <h3 style="font-size:12px;">{{book.title}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div style="position:absolute;left:0;top:0;width:100%;height:100%;opacity:0.2;background:url('images/writer_01_bg.png') no-repeat center center /cover"></div>
+        </div>
+    </ion-content>
+</ion-view>

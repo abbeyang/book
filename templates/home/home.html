@@ -1,0 +1,52 @@
+<ion-view view-title="悦读书店">
+    <ion-content style="background-color: #eee;">
+        <ion-slide-box id="slide" auto-play="true">
+            <ion-slide>
+                <img class="item-image" src="images/writer_01.jpg">
+            </ion-slide>
+            <ion-slide>
+                <img class="item-image" src="images/writer_02.jpg">
+            </ion-slide>
+            <ion-slide>
+                <img class="item-image" src="images/writer_03.jpg">
+            </ion-slide>
+        </ion-slide-box>
+
+        <div id="haha" class="row" style="text-align:center;">
+            <div class="col" ui-sref="tabs.category" nav-direction="back">分类</div>
+            <div class="col" ui-sref="tabs.writer" nav-direction="back">作家</div>
+            <div class="col" ui-sref="tabs.LowPrice" nav-direction="back">特价</div>
+            <div class="col" ui-sref="myCart" nav-direction="back" style="position: relative;">购物车
+                <span class="badge"
+                      ng-show="totalNumber()!=0"
+                      style="background-color:rgba(1,209,255,0.7);color:#fff;position: absolute;left:8px;top:-5px;box-shadow: 2px 3px 3px rgba(0,0,0,0.3);"
+                >{{totalNumber()}}</span>
+            </div>
+        </div>
+
+        <div class="list">
+            <div class="item">
+                <h3 class="title tabName">　<span>|</span>　主编力推</h3>
+                <div class="row" style="flex-wrap: wrap;">
+                    <ion-item class="col-33 item-image" ng-repeat="book in books | filter:{tag:'suggest'}" ng-click="toDetail(book)">
+                        <p>　</p>
+                        <img ng-src={{book.imgsrc}} style="width:100px;">
+                        <h4>￥{{book.price}}</h4>
+                        <h3 style="line-height: 20px;padding-bottom:5px;">{{book.title}}</h3>
+                    </ion-item>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h5 class="title tabName">　<span>|</span>　热门出版</h5>
+            <div>
+                <div id="bookIconCard" class="item item-avatar" ng-repeat="book in books | filter:{tag:'publish'}" ng-click="toDetail(book)">
+                    <img ng-src={{book.imgsrc}}>
+                    <h3 >{{book.title}}</h3>
+                    <p>本作形象地体现了存在主义哲学关于“荒谬”的观念；由于人和世界的分离，世界对于人来说是荒诞的、毫无意义的，而人对荒诞的世界无能为力，因此不抱任何希望，对一切事物都无动于衷。</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view title="我的购物车" hide-back-button >
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-home " ui-sref="home"></button>
+    </ion-nav-buttons>
+    <ion-content >
+        <div class="card" ng-show="errorStatus" style="padding:20px;">
+            错误{{errorStatus}}. 您的订单无法处理。
+            <a href="#/placeOrder" class="alert-link">再次尝试</a>
+        </div>
+
+        <div class="card" ng-show="!errorStatus" style="padding:20px;">
+            <h2>Thanks!</h2>
+            感谢购买我们的电子书！现在您可以畅享您购买的书籍。如果需要联系我们,您的订单号是{{orderId}}。
+        </div>
+    </ion-content>
+</ion-view>
+
+
+
+
+

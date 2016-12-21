@@ -1,0 +1,22 @@
+
+<ion-view title="特价精品">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back"
+                ng-click="goBack()"
+        ></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-home " ui-sref="home"
+        ></button>
+    </ion-nav-buttons>
+        <br/><br/><br/>
+        <div class="row has-header" style="flex-wrap: wrap;">
+            <ion-item class="col-33 item-image" ng-repeat="book in books | filter:{tag:'LowPrice'}" ng-click="toDetail(book)">
+                <p>　</p>
+                <img ng-src={{book.imgsrc}} style="width:100px;border-radius:5px;">
+                <h4>￥{{book.price}}</h4>
+                <h3 style="line-height: 20px;padding-bottom:5px;">{{book.title}}</h3>
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

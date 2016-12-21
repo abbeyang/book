@@ -1,0 +1,74 @@
+<ion-view title="图书分类" id="bg">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back" ui-sref="home"
+                ng-click="goBack()"
+        ></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-home " ui-sref="home"
+        ></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-slide-box id="slide" auto-play="true">
+            <ion-slide>
+                <img class="item-image" src="images/ad_01.jpg">
+            </ion-slide>
+            <ion-slide>
+                <img class="item-image" src="images/ad_02.jpg">
+            </ion-slide>
+        </ion-slide-box>
+        <div class="list">
+            <div class="row" id="cateButton">
+                <div class="col-50 left" >
+                    <span class="" ng-click="toCategory('奇异玄幻')">
+                        奇异玄幻
+                    </span>
+                </div>
+                <div class="col-50 right" ng-click="toCategory('都市小说')">
+                    <span class="">
+                        都市小说
+                    </span>
+                </div>
+            </div>
+            <div class="row" id="cateButton">
+                <div class="col-50 left" style="background-color: #db9864" ng-click="toCategory('历史文学')">
+                    <span class="">
+                        历史文学
+                    </span>
+                </div>
+                <div class="col-50 right" style="background-color: #db9864" ng-click="toCategory('悬疑惊悚')">
+                    <span class="">
+                        悬疑惊悚
+                    </span>
+                </div>
+            </div>
+            <div class="row" id="cateButton">
+                <div class="col-50 left" style="background-color: #b1695a" ng-click="toCategory('经典名著')">
+                    <span class="">
+                        经典名著
+                    </span>
+                </div>
+                <div class="col-50 right" style="background-color: #b1695a" ng-click="toCategory('生活工具')">
+                    <span class="">
+                        生活工具
+                    </span>
+                </div>
+            </div>
+            <div class="row" id="cateButton" >
+                <div class="col-50 left" style="background-color: #644749" ng-click="toCategory('科普教育')">
+                    <span class="">
+                        科普教育
+                    </span>
+                </div>
+                <div class="col-50 right" style="background-color: #644749" ng-click="toCategory('亲子育儿')">
+                    <span class="">
+                        亲子育儿
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="item-image">
+            <img src="images/ad_03.jpg">
+        </div>
+    </ion-content>
+</ion-view>

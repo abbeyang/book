@@ -1,0 +1,31 @@
+<ion-view title="我的购物车" hide-back-button>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon ion-ios-arrow-back"
+                ng-click="goBack()"
+        ></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-home " ui-sref="home"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="item" ng-show="cart.length==0">
+            您的购物车是空的。
+        </div>
+        <div ng-repeat="book in cart">
+            <div id="bookIconCard1" class="card item item-avatar">
+                <img ng-src={{book.product.imgsrc}}>
+                <div style="float:left;margin-top:15px;">
+                    <h3 >{{book.product.title}}</h3>
+                    <P>{{book.product.price | currency:"RMB ￥"}} </P>
+                </div>
+                <a class="button button-calm button-small" style="float:right; width: 80px;margin-top:20px;" ng-click="remove(book)">删除</a>
+            </div>
+        </div>
+    </ion-content>
+    <ion-tabs id="tabs">
+        <ion-tab title="{{totalNumber()}}个商品"></ion-tab>
+        <ion-tab title="{{totalMoney() | currency:'RMB ￥'}}"></ion-tab>
+        <ion-tab title="结算" ui-sref="checkout" "></ion-tab>
+    </ion-tabs>
+</ion-view>
+

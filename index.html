@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Title</title>
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" >
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="templates/home/homeCtrl.js"></script>
+    <script src="templates/lowPrice/LowPrice.js"></script>
+    <script src="templates/detail/detail.js"></script>
+    <script src="js/cartService.js"></script>
+    <script src="templates/myCart/myCart.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="templates/category/category.js"></script>
+    <script src="templates/category/categoryDetail.js"></script>
+</head>
+<body  ng-controller="cartCtrl">
+<!--导航栏-->
+<ion-nav-bar class="bar haha" id="bars" >
+</ion-nav-bar>
+
+<!--导航视图-->
+<ion-nav-view ></ion-nav-view>
+</body>
+</html>

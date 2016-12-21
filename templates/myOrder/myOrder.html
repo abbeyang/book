@@ -1,0 +1,40 @@
+<ion-view title="我的购物车" hide-back-button >
+
+    <ion-content >
+        <ion-content class="item" ng-show="cart.length==0">
+            您的购物车是空的。
+        </ion-content>
+            <form name="shoppingForm" ng-show="cart.length!=0" novalidate>
+            <div class="item">
+                用户名<input type="text" name="name" ng-model="shipping.name" required>
+                <span ng-show="shoppingForm.name.$error.required && shoppingForm.name.$dirty">请输入您的姓名</span>
+            </div>
+            <div class="item">
+                邮箱<input type="email" name="email" ng-model="shipping.email" valid>
+                <span ng-show="shoppingForm.email.$invalid">请输入正确的邮箱</span>
+            </div>
+            <div class="item">
+                电话<input type="tel" name="tel" ng-model="shipping.tel" required>
+                <span ng-show="shoppingForm.tel.$error.required && shoppingForm.tel.$dirty">请输入您的电话</span>
+            </div>
+            <!--<div class="item">
+                支付方式:　
+                <input id="first" type="radio" name="payment" value="first" ng-model="payment">　银行卡　
+                <input id="other" type="radio" name="payment" value="other" ng-model="payment">　悦读币
+                <p ng-show="payment == 'first'"><input type="text" name="cardPay" placeholder="请输入您的卡号" ng-model="shipping.cardPay" required></p>
+                <span ng-show="shoppingForm.cardPay.$error.required && shoppingForm.cardPay.$dirty">请输入您的姓名</span>
+                <p ng-show="payment == 'other'" style="margin-top:10px;">您的悦读币还剩:
+                    <span   style="background-color: #8ba892;padding:0 5px;
+                            border-radius:3px;color:#fff
+                    ">0个</span></p>
+            </div>-->
+                <div class="row" style="margin-top:20px;">
+                    <a class="button col-40" style="background-color:#8ba892;color:#fff;margin-right:10%"
+                       ng-disabled="shoppingForm.$invalid" ng-click="sendOrder()"
+                    >立即支付</a>
+                    <a ui-sref="home" class="button col-40" style="background-color:#8ba892;color:#fff;margin-left:10%">返回首页</a>
+                </div>
+        </form>
+    </ion-content>
+
+</ion-view>
