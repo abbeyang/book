@@ -4,7 +4,7 @@
 angular.module("cartService",[]);
 
 // 创建一个主模块
-var myapp = angular.module("myapp",["ionic","cartService", "starter.controllers", "starter.services"]);
+var myapp = angular.module("myapp",["ionic","cartService"]);
 myapp.controller("myCtrl",function($scope,$http){
     var url="data.json";
     $http.get(url)
@@ -12,20 +12,20 @@ myapp.controller("myCtrl",function($scope,$http){
             console.log(data)
         })
 });
-myapp.config(function($ionicConfigProvider) {
-	$ionicConfigProvider.platform.ios.tabs.style('standard'); 
-	$ionicConfigProvider.platform.ios.tabs.position('bottom');
-	$ionicConfigProvider.platform.android.tabs.style('standard');
-	$ionicConfigProvider.platform.android.tabs.position('bottom');
+myapp.config(function($stateProvider,$urlRouterProvider,$ionicConfigProvider){
+        $ionicConfigProvider.platform.ios.tabs.style('standard'); 
+        $ionicConfigProvider.platform.ios.tabs.position('bottom');
+        $ionicConfigProvider.platform.android.tabs.style('standard');
+        $ionicConfigProvider.platform.android.tabs.position('bottom');
 
-	$ionicConfigProvider.platform.ios.navBar.alignTitle('center'); 
-	$ionicConfigProvider.platform.android.navBar.alignTitle('left');
+        $ionicConfigProvider.platform.ios.navBar.alignTitle('center'); 
+        $ionicConfigProvider.platform.android.navBar.alignTitle('center');
 
-	$ionicConfigProvider.platform.ios.backButton.previousTitleText('').icon('ion-ios-arrow-thin-left');
-	$ionicConfigProvider.platform.android.backButton.previousTitleText('').icon('ion-android-arrow-back');	
+        $ionicConfigProvider.platform.ios.backButton.previousTitleText('').icon('ion-ios-arrow-thin-left');
+        $ionicConfigProvider.platform.android.backButton.previousTitleText('').icon('ion-android-arrow-back');        
 
-	$ionicConfigProvider.platform.ios.views.transition('ios'); 
-	$ionicConfigProvider.platform.android.views.transition('android');
+        $ionicConfigProvider.platform.ios.views.transition('ios'); 
+        $ionicConfigProvider.platform.android.views.transition('android');
 })
 
 // 配置路由
